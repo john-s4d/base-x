@@ -657,6 +657,12 @@
       "string": " \t\n\u000b\f\r skip \r\f\u000b\n\t a"
     },
     {
+      "alphabet": "base58",
+      "description": "unexpected unicode character 'а' (Unicode: U+0430), Cyrillic Small Letter A",
+      "exception": "^Error: Non-base58 character$",
+      "string": "3mwа"
+    },
+    {
       "alphabet": "0123456789fabcdef",
       "description": "poorly formed alphabet",
       "exception": "^TypeError: f is ambiguous$"

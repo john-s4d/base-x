@@ -105,7 +105,7 @@ function base (ALPHABET: string): base.BaseConverter {
       let carry = BASE_MAP[source.charCodeAt(psz)]
 
       // Invalid character
-      if (carry === 255) return
+      if (carry === 255 || carry === undefined || isNaN(carry)) return
 
       let i = 0
       for (let it3 = size - 1; (carry !== 0 || i < length) && (it3 !== -1); it3--, i++) {
